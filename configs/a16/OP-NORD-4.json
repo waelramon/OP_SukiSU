@@ -18,7 +18,7 @@
   "opt": true,
   "ds": false,
   "bbg": false,
-  "bbr": false,
+  "bbr": true,
   "bbr3": false,
   "ttl": false,
   "ip_set": false,
