@@ -1425,18 +1425,6 @@ runs:
         CONFIG_NET_SCH_CAKE=y        
         EOF
 
-    - name: Add TTL Target Support
-      if: ${{ env.OP_TTL == 'true' }}
-      shell: bash
-      run: |
-        set -euo pipefail
-        echo "Add TTL Target Support"
-        cat >> "$COMMON_KERNEL_FOLDER/arch/arm64/configs/gki_defconfig" <<EOF
-        CONFIG_IP_NF_TARGET_TTL=y
-        CONFIG_IP6_NF_TARGET_HL=y
-        CONFIG_IP6_NF_MATCH_HL=y
-        EOF
-
 
     - name: Add RUST build configs
       shell: bash
